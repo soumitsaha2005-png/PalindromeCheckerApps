@@ -1,56 +1,22 @@
-/**
- * =====================================================
- * MAIN CLASS - UseCase3PalindromeCheckerApp
- * =====================================================
- *
- * Use Case 3: Reverse String Based Palindrome Check
- *
- * Description:
- * This class checks whether a string is a palindrome
- * by reversing the string and comparing it with
- * the original value.
- *
- * At this stage, the application:
- * - Iterates the string in reverse order
- * - Builds a reversed version
- * - Compares original and reversed strings
- * - Displays the validation result
- *
- * @author Developer
- * @version 3.0
- */
-
-import java.util.Scanner;
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
 
 public class PalindromeCheckerApps {
-
-    /**
-     * Application entry point for UC3.
-     *
-     * @param args Command-line arguments
-     */
     public static void main(String[] args) {
-
-        Scanner scanner = new Scanner(System.in);
-
-        // Prompt user for input
-        System.out.print("Enter a string to check if it is a palindrome: ");
-        String input = scanner.nextLine();
-
+        String word = "madam";
         String reversed = "";
 
-        // Iterate from the last character to the first
-        for (int i = input.length() - 1; i >= 0; i--) {
-            reversed += input.charAt(i);
+        for(int i = word.length() - 1; i >= 0; --i) {
+            reversed = reversed + word.charAt(i);
         }
 
-        // Compare original and reversed strings
-        if (input.equals(reversed)) {
-            System.out.println("Result: The string is a palindrome.");
+        if (word.equals(reversed)) {
+            System.out.println(word + " is a palindrome.");
         } else {
-            System.out.println("Result: The string is NOT a palindrome.");
+            System.out.println(word + " is not a palindrome.");
         }
 
-        scanner.close();
     }
 }
