@@ -1,44 +1,22 @@
-/**
- * ===============================
- * MAIN CLASS - UseCase2PalindromeCheckerApp
- * ===============================
- *
- * Use Case 2: Print a Hardcoded Palindrome Result
- *
- * Description:
- * This class extends the startup flow by
- * checking a hardcoded string for palindrome status.
- *
- * At this stage, the application:
- * - Starts execution from the main() method
- * - Displays a welcome message and version
- * - Checks a hardcoded string ("madam")
- * - Prints whether it is a palindrome
- *
- * @author Developer
- * @version 2.0
- */
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 public class PalindromeCheckerApps {
-    /**
-     * Application entry point.
-     *
-     * @param args Command-line arguments
-     */
     public static void main(String[] args) {
-        // Startup flow
-        System.out.println("Welcome to the Palindrome Checker Management System");
-        System.out.println("Version : 2.0");
-        System.out.println("System initialized successfully.");
-
-        // Hardcoded string
         String word = "madam";
+        String reversed = "";
 
-        // Palindrome check
-        String reversed = new StringBuilder(word).reverse().toString();
-        if (word.equalsIgnoreCase(reversed)) {
-            System.out.println("The word \"" + word + "\" IS a palindrome.");
-        } else {
-            System.out.println("The word \"" + word + "\" is NOT a palindrome.");
+        for(int i = word.length() - 1; i >= 0; --i) {
+            reversed = reversed + word.charAt(i);
         }
+
+        if (word.equals(reversed)) {
+            System.out.println(word + " is a palindrome.");
+        } else {
+            System.out.println(word + " is not a palindrome.");
+        }
+
     }
 }
